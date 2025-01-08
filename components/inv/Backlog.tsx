@@ -1,5 +1,5 @@
 import React from 'react'
-import { AgCharts } from 'ag-charts-react'
+import { AgChartsReact } from 'ag-charts-react'
 import 'ag-charts-enterprise'
 
 function getBar() {
@@ -122,7 +122,7 @@ export default function NetworkInventory() {
             {/* <div className="border-b" /> */}
           </div>
           <div className="h-[450px]">
-            <AgCharts options={stackBar} />
+            <AgChartsReact options={stackBar} />
           </div>
         </div>
    

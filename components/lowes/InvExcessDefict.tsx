@@ -1,7 +1,6 @@
 'use client'
-
 import { useState } from 'react'
-import AgCharts from 'ag-charts-react'
+import { AgChartsReact } from 'ag-charts-react'
 
 import {
   generatedDeficitData,
@@ -79,7 +78,7 @@ const dataDeficit = generatedDeficitData
 
 
 export default function InvExcessDefict() {
-  const [options] = useState({
+  const [options, setOptions] = useState({
     data: dataExcess,
     series: [
       {
@@ -107,7 +106,7 @@ export default function InvExcessDefict() {
     //   text: '',
     // },
   })
-  const [options2] = useState({
+  const [options2, setOptions2] = useState({
     data: dataDeficit,
     series: [
       {
@@ -436,7 +435,7 @@ export default function InvExcessDefict() {
             </TableBody>
           </Table>
           <div className="w-full h-[500px]">
-            <AgCharts options={options} />
+            <AgChartsReact options={options} />
           </div>
         </div>
         <div className="w-full bg-white rounded-b-md border">
@@ -474,7 +473,7 @@ export default function InvExcessDefict() {
             </Table>
           </div>
           <div className="w-full h-[500px]">
-            <AgCharts options={options2} />
+            <AgChartsReact options={options2} />
           </div>
         </div>
       </div>

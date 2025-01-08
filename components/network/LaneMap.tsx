@@ -1,4 +1,4 @@
-import { AgCharts } from 'ag-charts-react' // Check if this import is correct
+import { AgChartsReact } from 'ag-charts-react' // Check if this import is correct
 
 // import { topology } from './topology'
 import {
@@ -8,7 +8,7 @@ import {
   capitals,
 } from '@/app/data/network/mapData/laneData/topology'
 
-import 'ag-charts-enterprise' // Import AgCharts Enterprise if needed
+import 'ag-charts-enterprise' // Import AgChartsReact Enterprise if needed
 
 import { ProgressBar } from '@progress/kendo-react-progressbars'
 import { AgChartOptions } from 'ag-charts-community'
@@ -207,7 +207,7 @@ export default function LaneMap() {
       </ul>
 
       <div className="w-full h-[900px]">
-        <AgCharts options={options as AgChartOptions} />
+        <AgChartsReact options={options as AgChartOptions} />
      
       </div>
     </div>

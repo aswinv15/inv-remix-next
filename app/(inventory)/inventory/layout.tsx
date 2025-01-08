@@ -11,7 +11,6 @@ import {
   ExclamationTriangleIcon,
   LoopIcon,
   // CameraIcon,
-  Component1Icon,
   RocketIcon,
   ViewGridIcon
 } from '@radix-ui/react-icons';
@@ -31,13 +30,13 @@ const senariomenus = [
     icon: <ViewGridIcon className="size-5" />,
     current: false
   },
-  {
-    id: 9,
-    name: 'Inventory On Hand',
-    to: '/inventory/onhand',
-    icon: <Component1Icon className="size-5" />,
-    current: false
-  },
+  // {
+  //   id: 9,
+  //   name: 'Inventory On Hand',
+  //   to: '/inventory/onhand',
+  //   icon: <Component1Icon className="size-5" />,
+  //   current: false
+  // },
   {
     id: 15,
     name: 'Scenario Analyzer',

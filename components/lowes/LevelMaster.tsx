@@ -1,4 +1,6 @@
-import React, { useCallback, useEffect, useState, useMemo } from 'react'
+'use client'
+
+// import React, { useCallback, useEffect, useState, useMemo } from 'react'
 import { AgGridReact } from 'ag-grid-react' // AG Grid Component
 // import { Form, useFetcher } from '@remix-run/react'
 // Optional Theme applied to the grid
@@ -149,11 +151,11 @@ import 'ag-grid-enterprise' // Required for AG Grid Enterprise features
 export default function LevelMaster() {
   //   const demand = useFetcher();
   // const fetcher = useFetcher()
-  const [rowData, setRowData] = useState(level)
-  const [gridApi, setGridApi] = useState(null)
-  const containerStyle = useMemo(() => ({ width: '100%', height: '100%' }), [])
+  // const [rowData, setRowData] = useState(level)
+  // const [gridApi, setGridApi] = useState(null)
+  // const containerStyle = useMemo(() => ({ width: '100%', height: '100%' }), [])
 
-  const gridStyle = useMemo(() => ({ height: '100%', width: '100%' }), [])
+  // const gridStyle = useMemo(() => ({ height: '100%', width: '100%' }), [])
 
   const defaultColDef = {
     sortable: true,
@@ -244,13 +246,12 @@ export default function LevelMaster() {
   //     setRowData(fetcher.data.data)
   //   }
   // }, [fetcher.data])
-
   return (
-    <div style={containerStyle}>
-      <div style={gridStyle} className={'ag-theme-quartz'}>
+    <div style={{ width: '100%', height: '100%' }}>
+      <div style={{ width: '100%', height: '100%' }} className={'ag-theme-quartz'}>
         <form method="post">
           <AgGridReact
-            columnDefs={columnDefs as any }
+            columnDefs={columnDefs}
             defaultColDef={defaultColDef}
             rowData={rowData}
             // onGridReady={onGridReady}

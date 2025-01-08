@@ -1,5 +1,5 @@
 import React from 'react';
-import { AgCharts } from 'ag-charts-react';
+import { AgChartsReact } from 'ag-charts-react';
 import 'ag-charts-enterprise';
 
 function getBar() {
@@ -92,7 +92,7 @@ export default function Comparing() {
       <div className=" text-blue-900 rounded-b-lg border">
      
         <div className="h-[450px]">
-          <AgCharts options={stackBar} />
+          <AgChartsReact options={stackBar} />
         </div>
       </div>
     </>

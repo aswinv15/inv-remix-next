@@ -21,8 +21,7 @@ import {
   useNodesState,
   useEdgesState,
   addEdge,
-  MiniMap,
-  Controls
+
 } from '@xyflow/react';
 
 import '@xyflow/react/dist/base.css';

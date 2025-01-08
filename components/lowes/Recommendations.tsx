@@ -1,8 +1,9 @@
-'use client'
-
 import React from 'react'
-import { CardTitle } from '@/components/ui/card'
-// Removed the problematic imports
+
+import { Card, CardContent, CardHeader, CardTitle } from '@/components/ui/card'
+import { createRoot } from 'react-dom/client'
+import { AgCharts, AgChartsReact } from 'ag-charts-react'
+import 'ag-charts-enterprise'
 import {
   Table,
   TableBody,
@@ -12,7 +13,6 @@ import {
   TableRow,
 } from '@/components/ui/table'
 import { Progress } from '@/components/ui/progress'
-import { AgChartsReact } from 'ag-charts-react'
 
 const action1 = [
   {

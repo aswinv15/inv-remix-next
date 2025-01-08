@@ -1,4 +1,6 @@
-import React, { useState } from "react";
+'use client'
+
+// import React, { useState } from "react";
 import { AgGridReact } from "ag-grid-react"; // AG Grid Component
 // import { Form, useFetcher } from "@remix-run/react";
 // Optional Theme applied to the grid

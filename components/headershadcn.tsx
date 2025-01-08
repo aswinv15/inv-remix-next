@@ -1,33 +1,49 @@
+'use client';
 import Image from 'next/image';
 import * as React from 'react';
-import { NavigationRisk } from './navigationrisk';
-import { ThemeToggle } from './theme-toggle';
+// import {
+//   SignInButton,
+//   SignedIn,
+//   SignedOut,
+//   UserButton,
+//   useUser
+// } from '@clerk/nextjs';
+import { Separator } from "@/components/ui/separator";
+
+// import { NavigationRisk } from './navigationrisk';
 
 export function Header() {
   return (
-    <header className="ml-20 sticky top-0 z-50 flex items-center justify-between max-w-full h-16 px-4 border-b shrink-0 bg-white">
-      <div className="flex items-center text-sky-500 text-lg ">
-        <React.Suspense
-          fallback={<div className="flex-1 overflow-auto" />}
-        ></React.Suspense>
+   <div className="ml-16">
+    <header className=" sticky top-0 z-50 flex items-center justify-between max-w-full h-16 px-4 shrink-0 bg-white">
+        <div className="flex items-center justify-end space-x-2">
+        <div className="flex items-center text-sky-500 text-lg ">
+        <h1 className='text-3xl font-bold'>Inventory Optimizer</h1>
+          {/* <React.Suspense fallback={<div className="flex-1 overflow-auto" />}>
+            <UserButton />
+          </React.Suspense> */}
+        </div>
+        {/* <ThemeToggle /> */}
       </div>
-      <NavigationRisk />
-      <div className="flex items-center justify-end space-x-2">
-        <ThemeToggle />
-        <button className="text-sky-500 font-semibold  p-1 flex items-center space-x-2 ">
-          <div className="relative flex  size-13 items-center  justify-center rounded-full">
-            <div className="flex items-center justify-center  rounded-full bg-gradient-to-t from-indigo-400 via-cyan-400 to-sky-500 shadow-lg p-0.5">
-              <Image
-                className="mx-auto bg-white  justify-center rounded-full p-1.5"
-                src="/assets/logo-4.png"
+
+      
+
+  
+
+    
+      <div className="">
+         <Image
+                className="mr-2"
+                src="/assets/SN.png"
                 alt="logo"
                 width={50}
                 height={50}
               />
-            </div>
-          </div>
-        </button>
+      
       </div>
-    </header>
+    
+      </header>
+      <Separator className="w-full"/> 
+      </div>
   );
 }

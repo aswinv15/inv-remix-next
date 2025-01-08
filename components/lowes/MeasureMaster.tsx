@@ -1,8 +1,12 @@
-import React, { useCallback, useEffect, useState, useMemo } from "react";
+'use client'
+
+// import React, { useCallback, useEffect, useState, useMemo } from "react";
 import { AgGridReact } from "ag-grid-react"; // AG Grid Component
 
 // Optional Theme applied to the grid
 import "ag-grid-enterprise"; // Required for AG Grid Enterprise features
+import { useMemo } from "react";
+import { useState } from "react";
 
 export default function MeasureMaster() {
   //   const demand = useFetcher();

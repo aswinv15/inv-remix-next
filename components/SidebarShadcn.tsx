@@ -1,7 +1,6 @@
 'use client';
 
 import Image from 'next/image';
-import logo from "@/public/assets/logo1.png"
 import Link from 'next/link';
 import { usePathname } from 'next/navigation';
 import { BsBoxes } from 'react-icons/bs';
@@ -134,7 +133,7 @@ export default function SidebarShadcn({
     <aside className="fixed inset-y-0 left-0 z-20 flex h-full flex-col border-r">
       <div className="border-b p-2">
         <Button variant="outline" size="icon" aria-label="Home">
-          <Image src={logo} alt="logo" width={32} height={32} />
+          <Image src="/assets/logo1.png" alt="logo" width={32} height={32} />
         </Button>
         {/* <Separator className="mt-2.5" /> */}
       </div>

@@ -26,52 +26,47 @@ import {
 } from '@/components/ui/select';
 import { kpiService_m, kpiInv_m } from '@/app/data/analysis/underData';
 
-import { columnsmeeting } from '@/components/datatable/columns-meeting';
-import { DataTable } from '@/components/datatable/data-table-meeting';
-import taskData from '@/app/data/columndata/tasks.json';
-import { cn } from '@/lib/utils';
+
+// import taskData from '@/app/data/columndata/tasks.json';
+
 import InventoryOnHand from '@/components/lowes/InventoryOnHand';
 import InvExcessDefict from '@/components/lowes/InvExcessDefict';
 import InventoryProjection from '@/components/lowes/InventoryProjection';
 import SimulationChart from '@/components/lowes/SimulationChart';
 import Redeploy from '@/components/lowes/Redeploy';
+import DemoContainer from '@/components/lowes/DemoContainer';
 
 
-  const invData = taskData.filter(
-    (task) => task.label === 'Inventory' && task.severity === 'High'
-  );
-;
-
-const stats = [
-  { name: 'Understand/decrease demand', stat: '+66K' },
-  { name: 'Redeploy stock', stat: '-1.0%' },
-  { name: 'Increase Supply', stat: '-2.0%' },
-  { name: 'Total Change to last', stat: '+1.5M' }
-];
+// const stats = [
+//   { name: 'Understand/decrease demand', stat: '+66K' },
+//   { name: 'Redeploy stock', stat: '-1.0%' },
+//   { name: 'Increase Supply', stat: '-2.0%' },
+//   { name: 'Total Change to last', stat: '+1.5M' }
+// ];
 
 
-const skuList = [
-  { title: 'SKU1' },
-  { title: 'SKU2' },
-  { title: 'SKU3' },
-  { title: 'SKU4' }
-];
+// const skuList = [
+//   { title: 'SKU1' },
+//   { title: 'SKU2' },
+//   { title: 'SKU3' },
+//   { title: 'SKU4' }
+// ];
 
-function DemoContainer({
-  // eslint-disable-next-line react/prop-types
-  className,
-  ...props
-}: React.HTMLAttributes<HTMLDivElement>) {
-  return (
-    <div
-      className={cn(
-        'flex items-center justify-center [&>div]:w-full',
-        className
-      )}
-      {...props}
-    />
-  );
-}
+// function DemoContainer({
+//   // eslint-disable-next-line react/prop-types
+//   className,
+//   ...props
+// }: React.HTMLAttributes<HTMLDivElement>) {
+//   return (
+//     <div
+//       className={cn(
+//         'flex items-center justify-center [&>div]:w-full',
+//         className
+//       )}
+//       {...props}
+//     />
+//   );
+// }
 
 export default function InventoryIndex() {
 
@@ -759,7 +754,7 @@ export default function InventoryIndex() {
                       <SelectContent>
                         <SelectGroup>
                           <SelectLabel>Scenario</SelectLabel>
-                          {skuList.map((sku) => (
+                          {skuList.map((sku: { title: string }) => (
                             <SelectItem key={sku.title} value={sku.title}>
                               {sku.title}
                             </SelectItem>

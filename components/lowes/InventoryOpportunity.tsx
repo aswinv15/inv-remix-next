@@ -1,10 +1,12 @@
 'use client'
-import { Card, CardContent, CardHeader, CardTitle } from '@/components/ui/card'
 
+import React, { Fragment, useState } from 'react'
+import { Card, CardContent, CardHeader, CardTitle } from '@/components/ui/card'
+import { createRoot } from 'react-dom/client'
 import { AgChartsReact } from 'ag-charts-react'
 import 'ag-charts-enterprise'
-import { useState } from 'react'
-
+import { cn } from '@/lib/utils'
+import { AgChartOptions } from 'ag-charts-enterprise'
 
 function formatNumber(value) {
   value /= 1_000_000
@@ -390,7 +392,7 @@ const commonOptions = {
 }
 
 const MyChart1 = () => {
-  const [chartOptions1, setChartOptions1] = useState({
+  const chartOptions1 = {
     ...commonOptions,
 
     sync: {
@@ -415,11 +417,11 @@ const MyChart1 = () => {
         yName: 'Gained',
       },
     ],
-  })
+  }
 
   return (
     <div className="h-[200px]">
-      <AgChartsReact options={chartOptions1} />
+      <AgChartsReact options={chartOptions1 as AgChartOptions} />
     </div>
   )
 }
@@ -453,7 +455,7 @@ const MyChart2 = () => {
 
   return (
     <div className="h-[200px]">
-      <AgChartsReact options={chartOptions2} />
+      <AgChartsReact options={chartOptions2 as AgChartOptions} />
     </div>
   )
 }
@@ -487,7 +489,7 @@ const MyChart3 = () => {
 
   return (
     <div className="h-[200px]">
-      <AgChartsReact options={chartOptions3} />
+      <AgChartsReact options={chartOptions3 as AgChartOptions} />
     </div>
   )
 }
@@ -512,7 +514,7 @@ const MyChart4 = () => {
 
   return (
     <div className="h-[200px]">
-      <AgChartsReact options={chartOptions1} />
+      <AgChartsReact options={chartOptions1 as AgChartOptions} />
     </div>
   )
 }
@@ -537,11 +539,10 @@ const MyChart5 = () => {
 
   return (
     <div className="h-[200px]">
-      <AgChartsReact options={chartOptions2} />
+      <AgChartsReact options={chartOptions2 as AgChartOptions} />
     </div>
   )
 }
-
 const MyChart6 = () => {
   const [chartOptions3, setChartOptions3] = useState({
     ...commonOptions,
@@ -562,7 +563,7 @@ const MyChart6 = () => {
 
   return (
     <div className="h-[200px]">
-      <AgChartsReact options={chartOptions3} />
+      <AgChartsReact options={chartOptions3 as AgChartOptions} />
     </div>
   )
 }
@@ -579,7 +580,7 @@ export default function InventoryOpportunity() {
 
           <CardContent className="">
             <div className="h-[350px]">
-              <AgChartsReact options={options} />
+              <AgChartsReact options={options as AgChartOptions} />
             </div>
           </CardContent>
         </Card>
@@ -595,7 +596,7 @@ export default function InventoryOpportunity() {
 
           <CardContent className="">
             <div className="h-[350px]">
-              <AgChartsReact options={bar} />
+              <AgChartsReact options={bar as AgChartOptions} />
             </div>
           </CardContent>
         </Card>

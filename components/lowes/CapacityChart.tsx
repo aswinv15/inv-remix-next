@@ -1,10 +1,11 @@
-import { useState, Fragment } from 'react'
-import { AgChartsReact } from 'ag-charts-react'
+'use client'
 
-import {
-  generatedDeficitData,
-  generatedInventoryExcess,
-} from '~/data/agGrid/snop/inventory/demandHeatMap'
+// import { AgChartsReact } from 'ag-charts-react'
+
+// import {
+//   generatedDeficitData,
+//   generatedInventoryExcess,
+// } from '@/app/data/agGrid/snop/inventory/demandHeatMap'
 import 'ag-charts-enterprise'
 import {
   Table,
@@ -13,8 +14,8 @@ import {
   TableHead,
   TableHeader,
   TableRow,
-} from '~/components/ui/table'
-import { Progress } from '~/components/ui/progress'
+} from '@/components/ui/table'
+import { Progress } from '@/components/ui/progress'
 const inventory = [
   {
     title: 'SKU-890123',
@@ -245,7 +246,7 @@ export default function CapacityChart() {
                   </TableCell>
                   <TableCell>
                     <Progress
-                      indicatorColor={invoice.progressColor}
+                      color={invoice.progressColor}
                       value={invoice.percent}
                     />
                   </TableCell>

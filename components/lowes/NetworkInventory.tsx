@@ -1,8 +1,7 @@
 'use client'
 
-import React, { Fragment, useState } from 'react'
-import { CardTitle } from '@/components/ui/card'
-import { createRoot } from 'react-dom/client'
+import React, { useState } from 'react'
+import {  CardTitle } from '@/components/ui/card'
 import { AgChartsReact } from 'ag-charts-react'
 import 'ag-charts-enterprise'
 // import {
@@ -12,9 +11,9 @@ import 'ag-charts-enterprise'
 //   TableHead,
 //   TableHeader,
 //   TableRow,
-// } from '@/components/ui/table'
-// import { Progress } from '@/components/ui/progress'
-// import { labels } from '@/app/data/columndata/data'
+// } from '@alert-dialog/components/ui/table'
+import { Progress } from '@/components/ui/progress'
+// import { labels } from '@/data/columndata/data'
 
 function getData() {
   return [
@@ -210,7 +209,7 @@ const stackBar = {
 }
 
 export default function NetworkInventory() {
-  const [heat] = useState({
+  const [heat, setOptions] = useState({
     // theme: 'ag-polychroma',
     data: dataExcess,
     series: [
