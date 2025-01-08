@@ -1,4 +1,7 @@
 'use client';
+import React from 'react';
+import { Button } from '@/components/ui/button';
+import { Tabs, TabsContent, TabsList, TabsTrigger } from '@/components/ui/tabs';
 import { PrinterIcon } from '@heroicons/react/24/outline';
 import {
   FilePlusIcon,
@@ -6,11 +9,12 @@ import {
   TrashIcon,
   DownloadIcon
 } from '@radix-ui/react-icons';
-import React from 'react';
-
-import { kpiService_m, kpiInv_m } from '@/app/data/analysis/underData';
-import taskData from '@/app/data/columndata/tasks.json';
-import { Button } from '@/components/ui/button';
+import {
+  Tooltip,
+  TooltipContent,
+  TooltipProvider,
+  TooltipTrigger
+} from '@/components/ui/tooltip';
 import {
   Select,
   SelectContent,
@@ -20,22 +24,17 @@ import {
   SelectTrigger,
   SelectValue
 } from '@/components/ui/select';
-import { Tabs, TabsContent, TabsList, TabsTrigger } from '@/components/ui/tabs';
-import {
-  Tooltip,
-  TooltipContent,
-  TooltipProvider,
-  TooltipTrigger
-} from '@/components/ui/tooltip';
-import { cn } from '@/lib/utils';
+import { kpiService_m, kpiInv_m } from '@/app/data/analysis/underData';
 
 import { columnsmeeting } from '@/components/datatable/columns-meeting';
 import { DataTable } from '@/components/datatable/data-table-meeting';
+import taskData from '@/app/data/columndata/tasks.json';
+import { cn } from '@/lib/utils';
 import InventoryOnHand from '@/components/lowes/InventoryOnHand';
-import InventoryProjection from '@/components/lowes/InventoryProjection';
 import InvExcessDefict from '@/components/lowes/InvExcessDefict';
-import Redeploy from '@/components/lowes/Redeploy';
+import InventoryProjection from '@/components/lowes/InventoryProjection';
 import SimulationChart from '@/components/lowes/SimulationChart';
+import Redeploy from '@/components/lowes/Redeploy';
 
 
   const invData = taskData.filter(
@@ -125,7 +124,7 @@ export default function InventoryIndex() {
                             size="icon"
                             className="bg-indigo-100 "
                           >
-                            <FilePlusIcon className="text-indigo-700 size-6 " />
+                            <FilePlusIcon className="text-indigo-700 w-6 h-6 " />
                           </Button>
                         </TooltipTrigger>
                         <TooltipContent>
@@ -141,7 +140,7 @@ export default function InventoryIndex() {
                             size="icon"
                             className="bg-purple-100"
                           >
-                            <Pencil2Icon className="text-purple-700 size-6 " />
+                            <Pencil2Icon className="text-purple-700 w-6 h-6 " />
                           </Button>
                         </TooltipTrigger>
                         <TooltipContent>
@@ -158,7 +157,7 @@ export default function InventoryIndex() {
                             size="icon"
                             className="bg-red-100"
                           >
-                            <TrashIcon className="text-red-700 size-6 " />
+                            <TrashIcon className="text-red-700 w-6 h-6 " />
                           </Button>
                         </TooltipTrigger>
                         <TooltipContent>
@@ -174,7 +173,7 @@ export default function InventoryIndex() {
                             size="icon"
                             className="bg-yellow-100"
                           >
-                            <PrinterIcon className="text-yellow-800 size-6 " />
+                            <PrinterIcon className="text-yellow-800 w-6 h-6 " />
                           </Button>
                         </TooltipTrigger>
                         <TooltipContent>
@@ -190,7 +189,7 @@ export default function InventoryIndex() {
                             size="icon"
                             className="bg-green-100"
                           >
-                            <DownloadIcon className="text-green-700 size-6 " />
+                            <DownloadIcon className="text-green-700 w-6 h-6 " />
                           </Button>
                         </TooltipTrigger>
                         <TooltipContent>
@@ -219,7 +218,7 @@ export default function InventoryIndex() {
                             size="icon"
                             className="bg-indigo-100 "
                           >
-                            <FilePlusIcon className="text-indigo-700 size-6 " />
+                            <FilePlusIcon className="text-indigo-700 w-6 h-6 " />
                           </Button>
                         </TooltipTrigger>
                         <TooltipContent>
@@ -235,7 +234,7 @@ export default function InventoryIndex() {
                             size="icon"
                             className="bg-purple-100"
                           >
-                            <Pencil2Icon className="text-purple-700 size-6 " />
+                            <Pencil2Icon className="text-purple-700 w-6 h-6 " />
                           </Button>
                         </TooltipTrigger>
                         <TooltipContent>
@@ -252,7 +251,7 @@ export default function InventoryIndex() {
                             size="icon"
                             className="bg-red-100"
                           >
-                            <TrashIcon className="text-red-700 size-6 " />
+                            <TrashIcon className="text-red-700 w-6 h-6 " />
                           </Button>
                         </TooltipTrigger>
                         <TooltipContent>
@@ -268,7 +267,7 @@ export default function InventoryIndex() {
                             size="icon"
                             className="bg-yellow-100"
                           >
-                            <PrinterIcon className="text-yellow-800 size-6 " />
+                            <PrinterIcon className="text-yellow-800 w-6 h-6 " />
                           </Button>
                         </TooltipTrigger>
                         <TooltipContent>
@@ -284,7 +283,7 @@ export default function InventoryIndex() {
                             size="icon"
                             className="bg-green-100"
                           >
-                            <DownloadIcon className="text-green-700 size-6 " />
+                            <DownloadIcon className="text-green-700 w-6 h-6 " />
                           </Button>
                         </TooltipTrigger>
                         <TooltipContent>
@@ -313,7 +312,7 @@ export default function InventoryIndex() {
                             size="icon"
                             className="bg-indigo-100 "
                           >
-                            <FilePlusIcon className="text-indigo-700 size-6 " />
+                            <FilePlusIcon className="text-indigo-700 w-6 h-6 " />
                           </Button>
                         </TooltipTrigger>
                         <TooltipContent>
@@ -329,7 +328,7 @@ export default function InventoryIndex() {
                             size="icon"
                             className="bg-purple-100"
                           >
-                            <Pencil2Icon className="text-purple-700 size-6 " />
+                            <Pencil2Icon className="text-purple-700 w-6 h-6 " />
                           </Button>
                         </TooltipTrigger>
                         <TooltipContent>
@@ -346,7 +345,7 @@ export default function InventoryIndex() {
                             size="icon"
                             className="bg-red-100"
                           >
-                            <TrashIcon className="text-red-700 size-6 " />
+                            <TrashIcon className="text-red-700 w-6 h-6 " />
                           </Button>
                         </TooltipTrigger>
                         <TooltipContent>
@@ -362,7 +361,7 @@ export default function InventoryIndex() {
                             size="icon"
                             className="bg-yellow-100"
                           >
-                            <PrinterIcon className="text-yellow-800 size-6 " />
+                            <PrinterIcon className="text-yellow-800 w-6 h-6 " />
                           </Button>
                         </TooltipTrigger>
                         <TooltipContent>
@@ -378,7 +377,7 @@ export default function InventoryIndex() {
                             size="icon"
                             className="bg-green-100"
                           >
-                            <DownloadIcon className="text-green-700 size-6 " />
+                            <DownloadIcon className="text-green-700 w-6 h-6 " />
                           </Button>
                         </TooltipTrigger>
                         <TooltipContent>
@@ -406,7 +405,7 @@ export default function InventoryIndex() {
                             size="icon"
                             className="bg-indigo-100 "
                           >
-                            <FilePlusIcon className="text-indigo-700 size-6 " />
+                            <FilePlusIcon className="text-indigo-700 w-6 h-6 " />
                           </Button>
                         </TooltipTrigger>
                         <TooltipContent>
@@ -422,7 +421,7 @@ export default function InventoryIndex() {
                             size="icon"
                             className="bg-purple-100"
                           >
-                            <Pencil2Icon className="text-purple-700 size-6 " />
+                            <Pencil2Icon className="text-purple-700 w-6 h-6 " />
                           </Button>
                         </TooltipTrigger>
                         <TooltipContent>
@@ -439,7 +438,7 @@ export default function InventoryIndex() {
                             size="icon"
                             className="bg-red-100"
                           >
-                            <TrashIcon className="text-red-700 size-6 " />
+                            <TrashIcon className="text-red-700 w-6 h-6 " />
                           </Button>
                         </TooltipTrigger>
                         <TooltipContent>
@@ -455,7 +454,7 @@ export default function InventoryIndex() {
                             size="icon"
                             className="bg-yellow-100"
                           >
-                            <PrinterIcon className="text-yellow-800 size-6 " />
+                            <PrinterIcon className="text-yellow-800 w-6 h-6 " />
                           </Button>
                         </TooltipTrigger>
                         <TooltipContent>
@@ -471,7 +470,7 @@ export default function InventoryIndex() {
                             size="icon"
                             className="bg-green-100"
                           >
-                            <DownloadIcon className="text-green-700 size-6 " />
+                            <DownloadIcon className="text-green-700 w-6 h-6 " />
                           </Button>
                         </TooltipTrigger>
                         <TooltipContent>
@@ -501,7 +500,7 @@ export default function InventoryIndex() {
                             size="icon"
                             className="bg-indigo-100 "
                           >
-                            <FilePlusIcon className="text-indigo-700 size-6 " />
+                            <FilePlusIcon className="text-indigo-700 w-6 h-6 " />
                           </Button>
                         </TooltipTrigger>
                         <TooltipContent>
@@ -517,7 +516,7 @@ export default function InventoryIndex() {
                             size="icon"
                             className="bg-purple-100"
                           >
-                            <Pencil2Icon className="text-purple-700 size-6 " />
+                            <Pencil2Icon className="text-purple-700 w-6 h-6 " />
                           </Button>
                         </TooltipTrigger>
                         <TooltipContent>
@@ -534,7 +533,7 @@ export default function InventoryIndex() {
                             size="icon"
                             className="bg-red-100"
                           >
-                            <TrashIcon className="text-red-700 size-6 " />
+                            <TrashIcon className="text-red-700 w-6 h-6 " />
                           </Button>
                         </TooltipTrigger>
                         <TooltipContent>
@@ -550,7 +549,7 @@ export default function InventoryIndex() {
                             size="icon"
                             className="bg-yellow-100"
                           >
-                            <PrinterIcon className="text-yellow-800 size-6 " />
+                            <PrinterIcon className="text-yellow-800 w-6 h-6 " />
                           </Button>
                         </TooltipTrigger>
                         <TooltipContent>
@@ -566,7 +565,7 @@ export default function InventoryIndex() {
                             size="icon"
                             className="bg-green-100"
                           >
-                            <DownloadIcon className="text-green-700 size-6 " />
+                            <DownloadIcon className="text-green-700 w-6 h-6 " />
                           </Button>
                         </TooltipTrigger>
                         <TooltipContent>
@@ -604,7 +603,7 @@ export default function InventoryIndex() {
                   </div>
                 </div>
 
-                <ul className="m-4 p-1 grid grid-cols-1 md:grid-cols-1 rounded-lg bg-white shadow-xl shadow-slate-900/10">
+                <ul className="mx-4 my-4 p-1 grid grid-cols-1 md:grid-cols-1 rounded-lg bg-white shadow-xl shadow-slate-900/10">
                   {kpiService_m.map((kpi) => (
                     <li
                       key={kpi.Name}
@@ -629,7 +628,7 @@ export default function InventoryIndex() {
 
                 {/* charts */}
 
-                <ul className="m-4 p-1 grid grid-cols-1 md:grid-cols-1 rounded-lg bg-white shadow-xl shadow-slate-900/10">
+                <ul className="mx-4 my-4 p-1 grid grid-cols-1 md:grid-cols-1 rounded-lg bg-white shadow-xl shadow-slate-900/10">
                   {kpiInv_m.map((kpi) => (
                     <li
                       key={kpi.Name}
@@ -667,7 +666,7 @@ export default function InventoryIndex() {
                             size="icon"
                             className="bg-indigo-100 "
                           >
-                            <FilePlusIcon className="text-indigo-700 size-6 " />
+                            <FilePlusIcon className="text-indigo-700 w-6 h-6 " />
                           </Button>
                         </TooltipTrigger>
                         <TooltipContent>
@@ -683,7 +682,7 @@ export default function InventoryIndex() {
                             size="icon"
                             className="bg-purple-100"
                           >
-                            <Pencil2Icon className="text-purple-700 size-6 " />
+                            <Pencil2Icon className="text-purple-700 w-6 h-6 " />
                           </Button>
                         </TooltipTrigger>
                         <TooltipContent>
@@ -700,7 +699,7 @@ export default function InventoryIndex() {
                             size="icon"
                             className="bg-red-100"
                           >
-                            <TrashIcon className="text-red-700 size-6 " />
+                            <TrashIcon className="text-red-700 w-6 h-6 " />
                           </Button>
                         </TooltipTrigger>
                         <TooltipContent>
@@ -716,7 +715,7 @@ export default function InventoryIndex() {
                             size="icon"
                             className="bg-yellow-100"
                           >
-                            <PrinterIcon className="text-yellow-800 size-6 " />
+                            <PrinterIcon className="text-yellow-800 w-6 h-6 " />
                           </Button>
                         </TooltipTrigger>
                         <TooltipContent>
@@ -732,7 +731,7 @@ export default function InventoryIndex() {
                             size="icon"
                             className="bg-green-100"
                           >
-                            <DownloadIcon className="text-green-700 size-6 " />
+                            <DownloadIcon className="text-green-700 w-6 h-6 " />
                           </Button>
                         </TooltipTrigger>
                         <TooltipContent>

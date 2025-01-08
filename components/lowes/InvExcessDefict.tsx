@@ -1,5 +1,7 @@
-import { useState, Fragment } from 'react'
-import { AgCharts } from 'ag-charts-react'
+'use client'
+
+import { useState } from 'react'
+import AgCharts from 'ag-charts-react'
 
 import {
   generatedDeficitData,
@@ -77,7 +79,7 @@ const dataDeficit = generatedDeficitData
 
 
 export default function InvExcessDefict() {
-  const [options, setOptions] = useState({
+  const [options] = useState({
     data: dataExcess,
     series: [
       {
@@ -105,7 +107,7 @@ export default function InvExcessDefict() {
     //   text: '',
     // },
   })
-  const [options2, setOptions2] = useState({
+  const [options2] = useState({
     data: dataDeficit,
     series: [
       {

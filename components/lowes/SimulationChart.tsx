@@ -1,8 +1,9 @@
-import React, { Fragment, useState, useCallback, useRef } from 'react'
-import { AgCharts } from 'ag-charts-react'
+'use client'
+import React, { useRef } from 'react'
+import { AgChartsReact } from 'ag-charts-react'
 import { getData } from '@/app/data/agGrid/snop/inventory/simulationChart'
 
-function tooltipRenderer({ datum, xKey, yKey }) {
+function tooltipRenderer({ datum, xKey, yKey }: { datum: any, xKey: string, yKey: string }) {
   return { content: `${datum[xKey]}: ${datum[yKey]}%` }
 }
 const Demand = {
@@ -78,7 +79,7 @@ const BAR_AND_LINE = [
 
 export default function SimulationChart() {
   const chartRef = useRef(null)
-  const [options, setOptions] = useState({
+  const options = {
     data: getData(),
     // title: {
     //   text: 'Inventory Simulation for SKU 1234',
@@ -109,11 +110,11 @@ export default function SimulationChart() {
         },
       },
     ],
-  })
+  }
 
   return (
     <div className="flex h-[700px] flex-col">
-      <AgCharts ref={chartRef} options={options} />
+      <AgChartsReact ref={chartRef} options={options} />
     </div>
   )
 }

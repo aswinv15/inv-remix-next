@@ -1,3 +1,5 @@
+'use client'
+
 import React, {
   useCallback,
   useEffect,
@@ -9,9 +11,7 @@ import React, {
 } from 'react'
 import { AgGridReact, CustomCellRendererProps } from 'ag-grid-react' // AG Grid Component
 
-
-import { CellClassParams, ValueGetterParams, ValueParserParams } from 'ag-grid-enterprise'
-import { generatedAccuracyData } from '~/data/agGrid/snop/demand/forecastAccuracy.js'
+import { generatedAccuracyData } from '@/app/data/agGrid/snop/demand/forecastAccuracy.js'
 
 const ragCellClassRules: CellClassRules = {
   'rag-green-outer': (params) => params.value === 2008,

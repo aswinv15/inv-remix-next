@@ -25,6 +25,9 @@ export const kpiService_m = [
         series={discountproductSeries_m}
       />
     ),
+
+     Analyze:""
+     
   },
 ];
 
@@ -36,7 +39,11 @@ export const kpiInv_m = [
         category={discountproductCategories_m}
         series={discountproductSeries_m}
       />
+
     ),
+
+    Analyze:""
+
   },
 ];
 

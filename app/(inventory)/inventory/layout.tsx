@@ -1,21 +1,20 @@
+
+import SidebarShadcn from '@/components/SidebarShadcn';
+// import SidebarDemo from '@/components/SidebarDemo';
+
+import { LifeBuoy, SquareUser } from 'lucide-react';
 import {
   CubeIcon,
-  PieChartIcon,
+  // PieChartIcon,
   MixIcon,
   BarChartIcon,
   ExclamationTriangleIcon,
   LoopIcon,
-  CameraIcon,
+  // CameraIcon,
   Component1Icon,
   RocketIcon,
   ViewGridIcon
 } from '@radix-ui/react-icons';
-import { LifeBuoy, SquareUser } from 'lucide-react';
-
-import Header from '@/components/header';
-import SidebarShadcn from '@/components/SidebarShadcn';
-// import SidebarDemo from '@/components/SidebarDemo';
-
 
 const senariomenus = [
   {

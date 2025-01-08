@@ -1,22 +1,20 @@
-'use client';
-
-import { Button } from '@/components/ui/button';
-
-import { PrinterIcon } from '@heroicons/react/24/outline';
+import { Button } from '@/components/ui/button'
+import { PrinterIcon } from '@heroicons/react/24/outline'
 import {
   FilePlusIcon,
   Pencil2Icon,
   TrashIcon,
-  DownloadIcon
-} from '@radix-ui/react-icons';
+  DownloadIcon,
+} from '@radix-ui/react-icons'
 import {
   Tooltip,
   TooltipContent,
   TooltipProvider,
-  TooltipTrigger
-} from '@/components/ui/tooltip';
+  TooltipTrigger,
+} from '@/components/ui/tooltip'
 
-import Backlog from '@/components/inv/Backlog';
+import Redeploy from '@/components/lowes/Redeploy'
+
 
 export function Icontooltip() {
   return (
@@ -83,33 +81,24 @@ export function Icontooltip() {
         </Tooltip>
       </TooltipProvider>
     </div>
-  );
+  )
 }
 
-
-
-export default function Flowchart() {
+export default function InventoryIndex() {
   return (
     <>
       <div className="m-4">
-        <div className="w-100 my-2 flex  justify-between p-4 rounded-lg border bg-white">
-          <h2 className="text-3xl font-bold text-transparent bg-clip-text bg-gradient-to-r from-blue-700 via-sky-700 to-blue-700 font-display">
-            Availability Analytics
-          </h2>
-
-          <div className="flex items-center justify-end"></div>
-        </div>
-
-        <div className="flex items-center justify-center  rounded-t-lg bg-gradient-to-t from-indigo-400 via-cyan-400 to-sky-500  p-0.5">
+        <div className="flex items-center justify-center  rounded-t-lg bg-gradient-to-t from-indigo-400 via-cyan-400 to-sky-500 shadow-lg p-0.5">
           <div className=" flex items-center w-full justify-between bg-sky-50  border rounded-t-lg text-2xl text-blue-900 font-bold">
-            <div className="p-2">Backlog Analyzer</div>
+            <div className="p-2">Redeploy and Balance</div>
+
             <Icontooltip />
           </div>
         </div>
         <div>
-          <Backlog />
+          <Redeploy />
         </div>
       </div>
     </>
-  );
+  )
 }

@@ -5,7 +5,7 @@ import { ThemeToggle } from './theme-toggle';
 
 export function Header() {
   return (
-    <header className="sticky top-0 z-50 flex items-center justify-between max-w-full h-16 px-4 border-b shrink-0 bg-white">
+    <header className="ml-20 sticky top-0 z-50 flex items-center justify-between max-w-full h-16 px-4 border-b shrink-0 bg-white">
       <div className="flex items-center text-sky-500 text-lg ">
         <React.Suspense
           fallback={<div className="flex-1 overflow-auto" />}

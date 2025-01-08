@@ -1,23 +1,32 @@
-'use client';
+"use client";
 
-import { Button } from '@/components/ui/button';
+import { Button } from "@/components/ui/button";
 
-import { PrinterIcon } from '@heroicons/react/24/outline';
+import { PrinterIcon } from "@heroicons/react/24/outline";
 import {
   FilePlusIcon,
   Pencil2Icon,
   TrashIcon,
-  DownloadIcon
-} from '@radix-ui/react-icons';
+  DownloadIcon,
+} from "@radix-ui/react-icons";
 import {
   Tooltip,
   TooltipContent,
   TooltipProvider,
-  TooltipTrigger
-} from '@/components/ui/tooltip';
+  TooltipTrigger,
+} from "@/components/ui/tooltip";
 
-import Backlog from '@/components/inv/Backlog';
+// import ReactFlow, {
+//   useNodesState,
+//   useEdgesState,
+//   addEdge,
+//   Controls,
+//   MarkerType,
+// } from "reactflow";
 
+// import "reactflow/dist/base.css";
+
+import Skuservice from "@/components/lowes/SkuService";
 export function Icontooltip() {
   return (
     <div className="m-2 space-x-1">
@@ -86,8 +95,6 @@ export function Icontooltip() {
   );
 }
 
-
-
 export default function Flowchart() {
   return (
     <>
@@ -100,14 +107,14 @@ export default function Flowchart() {
           <div className="flex items-center justify-end"></div>
         </div>
 
-        <div className="flex items-center justify-center  rounded-t-lg bg-gradient-to-t from-indigo-400 via-cyan-400 to-sky-500  p-0.5">
-          <div className=" flex items-center w-full justify-between bg-sky-50  border rounded-t-lg text-2xl text-blue-900 font-bold">
-            <div className="p-2">Backlog Analyzer</div>
+        <div className="flex items-center justify-center  rounded-t-lg bg-gradient-to-t from-indigo-400 via-cyan-400 to-sky-500 shadow-lg p-0.5">
+          <div className="flex items-center w-full justify-between bg-sky-50  border rounded-t-lg text-2xl text-blue-900 font-bold">
+            <div className="p-2">Service-Prediction</div>
             <Icontooltip />
           </div>
         </div>
         <div>
-          <Backlog />
+          <Skuservice />
         </div>
       </div>
     </>

@@ -1,3 +1,5 @@
+'use client'
+
 import { Fragment } from 'react'
 
 import 'ag-charts-enterprise'
@@ -8,7 +10,7 @@ import {
   TableHead,
   TableHeader,
   TableRow,
-} from '~/components/ui/table'
+} from '@/components/ui/table'
 
 // const inventory = [
 //   {

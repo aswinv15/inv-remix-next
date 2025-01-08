@@ -1,10 +1,10 @@
-import React from 'react'
-import React, { Fragment, useState } from 'react'
-import { Card, CardContent, CardHeader, CardTitle } from '~/components/ui/card'
-import { createRoot } from 'react-dom/client'
+'use client'
+import { Card, CardContent, CardHeader, CardTitle } from '@/components/ui/card'
+
 import { AgChartsReact } from 'ag-charts-react'
 import 'ag-charts-enterprise'
-import { cn } from '~/lib/utils'
+import { useState } from 'react'
+
 
 function formatNumber(value) {
   value /= 1_000_000
@@ -425,7 +425,7 @@ const MyChart1 = () => {
 }
 
 const MyChart2 = () => {
-  const [chartOptions2, setChartOptions2] = useState({
+  const chartOptions2 = {
     ...commonOptions,
 
     sync: {
@@ -449,7 +449,7 @@ const MyChart2 = () => {
         yName: 'Gained',
       },
     ],
-  })
+  }
 
   return (
     <div className="h-[200px]">

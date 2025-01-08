@@ -1,22 +1,37 @@
-'use client';
+"use client"
 
-import { Button } from '@/components/ui/button';
-
-import { PrinterIcon } from '@heroicons/react/24/outline';
+import { Button } from '@/components/ui/button'
+// import { Tabs, TabsContent, TabsList, TabsTrigger } from '@/components/ui/tabs'
+import { PrinterIcon } from '@heroicons/react/24/outline'
 import {
   FilePlusIcon,
   Pencil2Icon,
   TrashIcon,
-  DownloadIcon
-} from '@radix-ui/react-icons';
+  DownloadIcon,
+} from '@radix-ui/react-icons'
 import {
   Tooltip,
   TooltipContent,
   TooltipProvider,
-  TooltipTrigger
-} from '@/components/ui/tooltip';
+  TooltipTrigger,
+} from '@/components/ui/tooltip'
 
-import Backlog from '@/components/inv/Backlog';
+// import { kpiService_m} from '@/app/data/analysis/underData'
+// import { columnsmeeting } from '@/components/datatable/columns-meeting'
+// import { DataTable } from '@/components/datatable/data-table-meeting'
+// import taskData from '@/app/data/columndata/tasks.json'
+// import { cn } from '@/lib/utils'
+// import InventoryOnHand from '@/components/lowes/InventoryOnHand'
+// import InvExcessDefict from '@/components/lowes/InvExcessDefict'
+// import InventoryProjection from '@/components/lowes/InventoryProjection'
+// import SimulationChart from '@/components/lowes/SimulationChart'
+// import Redeploy from '@/components/lowes/Redeploy'
+// import InventoryOpportunity from '@/components/lowes/InventoryOpportunity'
+// import Recommendations from '@/components/lowes/Recommendations'
+// import NetworkInventory from '@/components/lowes/NetworkInventory'
+// import CardLayout from '@/components/snop/CardLayout'
+import NetworkInventory from '@/components/lowes/NetworkInventory'
+
 
 export function Icontooltip() {
   return (
@@ -83,33 +98,35 @@ export function Icontooltip() {
         </Tooltip>
       </TooltipProvider>
     </div>
-  );
+  )
 }
 
 
+export default function InventoryIndex() {
 
-export default function Flowchart() {
   return (
     <>
       <div className="m-4">
         <div className="w-100 my-2 flex  justify-between p-4 rounded-lg border bg-white">
           <h2 className="text-3xl font-bold text-transparent bg-clip-text bg-gradient-to-r from-blue-700 via-sky-700 to-blue-700 font-display">
-            Availability Analytics
+            Slow Moving Inventory Optimizer
           </h2>
 
           <div className="flex items-center justify-end"></div>
         </div>
 
-        <div className="flex items-center justify-center  rounded-t-lg bg-gradient-to-t from-indigo-400 via-cyan-400 to-sky-500  p-0.5">
+        <div className="flex items-center justify-center  rounded-t-lg bg-gradient-to-t from-indigo-400 via-cyan-400 to-sky-500 shadow-lg p-0.5">
           <div className=" flex items-center w-full justify-between bg-sky-50  border rounded-t-lg text-2xl text-blue-900 font-bold">
-            <div className="p-2">Backlog Analyzer</div>
+            <div className="p-2">Current Network Inventory</div>
             <Icontooltip />
           </div>
         </div>
         <div>
-          <Backlog />
+        <div>
+          <NetworkInventory />
+        </div>
         </div>
       </div>
     </>
-  );
+  )
 }

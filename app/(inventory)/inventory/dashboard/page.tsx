@@ -1,5 +1,7 @@
 'use client';
 
+import { Button } from '@/components/ui/button';
+
 import { PrinterIcon } from '@heroicons/react/24/outline';
 import {
   FilePlusIcon,
@@ -7,18 +9,14 @@ import {
   TrashIcon,
   DownloadIcon
 } from '@radix-ui/react-icons';
-
-import { kpiService_m } from '@/app/data/dashboard/inventoryData';
-import { Button } from '@/components/ui/button';
 import {
   Tooltip,
   TooltipContent,
   TooltipProvider,
   TooltipTrigger
 } from '@/components/ui/tooltip';
-
 import CardLayout from '@/components/snop/CardLayout';
-
+import { kpiService_m } from '@/app/data/dashboard/inventoryData';
 
 export function Icontooltip() {
   return (
@@ -27,7 +25,7 @@ export function Icontooltip() {
         <Tooltip>
           <TooltipTrigger asChild>
             <Button variant="outline" size="icon" className="bg-indigo-100 ">
-              <FilePlusIcon className="text-indigo-700 size-6 " />
+              <FilePlusIcon className="text-indigo-700 w-6 h-6 " />
             </Button>
           </TooltipTrigger>
           <TooltipContent>
@@ -39,7 +37,7 @@ export function Icontooltip() {
         <Tooltip>
           <TooltipTrigger asChild>
             <Button variant="outline" size="icon" className="bg-purple-100">
-              <Pencil2Icon className="text-purple-700 size-6 " />
+              <Pencil2Icon className="text-purple-700 w-6 h-6 " />
             </Button>
           </TooltipTrigger>
           <TooltipContent>
@@ -52,7 +50,7 @@ export function Icontooltip() {
         <Tooltip>
           <TooltipTrigger asChild>
             <Button variant="outline" size="icon" className="bg-red-100">
-              <TrashIcon className="text-red-700 size-6 " />
+              <TrashIcon className="text-red-700 w-6 h-6 " />
             </Button>
           </TooltipTrigger>
           <TooltipContent>
@@ -64,7 +62,7 @@ export function Icontooltip() {
         <Tooltip>
           <TooltipTrigger asChild>
             <Button variant="outline" size="icon" className="bg-yellow-100">
-              <PrinterIcon className="text-yellow-800 size-6 " />
+              <PrinterIcon className="text-yellow-800 w-6 h-6 " />
             </Button>
           </TooltipTrigger>
           <TooltipContent>
@@ -76,7 +74,7 @@ export function Icontooltip() {
         <Tooltip>
           <TooltipTrigger asChild>
             <Button variant="outline" size="icon" className="bg-green-100">
-              <DownloadIcon className="text-green-700 size-6 " />
+              <DownloadIcon className="text-green-700 w-6 h-6 " />
             </Button>
           </TooltipTrigger>
           <TooltipContent>
